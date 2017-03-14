@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Sewage.unity
+- path: Assets/Sewer.unity
   isLoaded: 1
   isActive: 1
