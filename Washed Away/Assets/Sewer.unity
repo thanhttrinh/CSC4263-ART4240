@@ -130,7 +130,7 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.43900013, y: 0.75900006}
+  m_ConnectedAnchor: {x: 0.6620002, y: -0.30700016}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!60 &244233508
@@ -142,7 +142,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
@@ -307,11 +307,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4039162931865190, guid: 6289e98726e8747bdac2ed43f036e82b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.494
+      value: -6.73
       objectReference: {fileID: 0}
     - target: {fileID: 4039162931865190, guid: 6289e98726e8747bdac2ed43f036e82b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.552
+      value: -4.568
       objectReference: {fileID: 0}
     - target: {fileID: 4039162931865190, guid: 6289e98726e8747bdac2ed43f036e82b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -461,11 +461,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4715641249423784, guid: e006fbfc0d0d34a4bb84161f7eb7bd22, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.055
+      value: -6.068
       objectReference: {fileID: 0}
     - target: {fileID: 4715641249423784, guid: e006fbfc0d0d34a4bb84161f7eb7bd22, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.793
+      value: -4.875
       objectReference: {fileID: 0}
     - target: {fileID: 4715641249423784, guid: e006fbfc0d0d34a4bb84161f7eb7bd22, type: 2}
       propertyPath: m_LocalPosition.z
@@ -513,7 +513,7 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.43900013, y: -0.75900006}
+  m_ConnectedAnchor: {x: -0.6620002, y: 0.30700016}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!50 &1341696566
@@ -657,7 +657,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 1.5700561
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -678,7 +678,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1373481996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -6.7, y: -3.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
