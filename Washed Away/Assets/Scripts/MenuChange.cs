@@ -17,7 +17,7 @@ public class MenuChange : MonoBehaviour
 	{
 		if(Input.GetMouseButtonDown(0))
 		{
-			SceneManager.LoadScene ("Sewage");
+			SceneManager.LoadScene ("Sewer");
 		}
 	}
 }
