@@ -7,5 +7,9 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Menu.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Sewage.unity
+  - enabled: 1
+    path: Assets/Sewer.unity
+  - enabled: 1
+    path: Assets/SewerPipes.unity
