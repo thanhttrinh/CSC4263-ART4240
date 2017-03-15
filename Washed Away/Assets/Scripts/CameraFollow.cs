@@ -9,11 +9,15 @@ public class CameraFollow : MonoBehaviour {
 
 	void Start() 
 	{
-		offset = transform.position - player.transform.position;
+		//offset = transform.position - player.transform.position;
 	}
 
 	void LateUpdate() 
 	{
-		transform.position = player.transform.position + offset;
+		//transform.position = player.transform.position + offset;
+
+		// camera is fixed on x-coordinate
+		// follows player as player moves its y-coordinate
+		transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
 	}
 }
