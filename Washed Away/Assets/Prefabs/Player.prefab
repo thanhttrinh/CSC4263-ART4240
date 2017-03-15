@@ -22,9 +22,11 @@ GameObject:
   - component: {fileID: 212760998952761198}
   - component: {fileID: 95375188501519382}
   - component: {fileID: 114954678491542806}
+  - component: {fileID: 50725406062510482}
+  - component: {fileID: 60616524632354862}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,12 +38,92 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1265003268682328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.47, y: -4.56, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.73, y: -4.568, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50725406062510482
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1265003268682328}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &60616524632354862
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1265003268682328}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.085, y: -0.34}
+      - {x: 0.155, y: -0.32}
+      - {x: 0.21499999, y: -0.28}
+      - {x: 0.275, y: -0.21}
+      - {x: 0.375, y: 0.049999997}
+      - {x: 0.375, y: 0.17}
+      - {x: 0.345, y: 0.22}
+      - {x: 0.285, y: 0.22999999}
+      - {x: 0.285, y: 0.35999998}
+      - {x: 0.265, y: 0.38}
+      - {x: 0.375, y: 0.39}
+      - {x: 0.375, y: 0.47}
+      - {x: 0.195, y: 0.5}
+      - {x: 0.085, y: 0.56}
+      - {x: -0.074999996, y: 0.56}
+      - {x: -0.195, y: 0.48}
+      - {x: -0.355, y: 0.48}
+      - {x: -0.36499998, y: 0.45}
+      - {x: -0.36499998, y: 0.39}
+      - {x: -0.265, y: 0.35}
+      - {x: -0.355, y: 0.17999999}
+      - {x: -0.36499998, y: 0.14999999}
+      - {x: -0.36499998, y: 0.049999997}
+      - {x: -0.325, y: -0.01}
+      - {x: -0.275, y: -0.03}
+      - {x: -0.265, y: -0.19999999}
+      - {x: -0.225, y: -0.26}
+      - {x: -0.145, y: -0.32}
+      - {x: 0.005, y: -0.45999998}
+      - {x: 0.125, y: -0.56}
+      - {x: 0.235, y: -0.56}
+      - {x: 0.24499999, y: -0.55}
+      - {x: 0.255, y: -0.5}
+      - {x: 0.155, y: -0.39999998}
+    - - {x: -0.405, y: 0.37}
+      - {x: -0.405, y: 0.29}
+      - {x: -0.295, y: 0.29}
+      - {x: -0.285, y: 0.31}
+      - {x: -0.285, y: 0.35999998}
+      - {x: -0.305, y: 0.37}
+    - - {x: 0.295, y: 0.35}
+      - {x: 0.295, y: 0.31}
+      - {x: 0.315, y: 0.29}
+      - {x: 0.405, y: 0.29}
+      - {x: 0.405, y: 0.37}
+      - {x: 0.315, y: 0.37}
 --- !u!95 &95375188501519382
 Animator:
   serializedVersion: 3
