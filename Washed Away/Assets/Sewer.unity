@@ -599,26 +599,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1265003268682328, guid: 6289e98726e8747bdac2ed43f036e82b,
     type: 2}
   m_PrefabInternal: {fileID: 1210889300}
---- !u!50 &1341696561
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1341696560}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1373481996
 GameObject:
   m_ObjectHideFlags: 0
