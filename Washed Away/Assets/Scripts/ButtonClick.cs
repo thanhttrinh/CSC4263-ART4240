@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ButtonClick : MonoBehaviour {
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
         SceneManager.LoadScene("Sewer");
         //upon clicking the game object, change the scene

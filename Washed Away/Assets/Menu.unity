@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 566096634}
   - component: {fileID: 566096633}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,10 +278,11 @@ GameObject:
   m_Component:
   - component: {fileID: 727172637}
   - component: {fileID: 727172636}
-  - component: {fileID: 727172639}
   - component: {fileID: 727172638}
+  - component: {fileID: 727172639}
+  - component: {fileID: 727172640}
   m_Layer: 0
-  m_Name: Square
+  m_Name: PlayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -318,8 +319,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6485a1fda1fc04e8293460b5d5bb51f1, type: 3}
-  m_Color: {r: 1, g: 0.9726166, b: 0.60294116, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 081c36b9d6bd745458a45948d080fdfd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!4 &727172637
@@ -330,7 +331,7 @@ Transform:
   m_GameObject: {fileID: 727172635}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.01, y: -0.47, z: 0}
-  m_LocalScale: {x: 7.93925, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -346,8 +347,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0ee9dc4c0a03e4aa3ac6141fee208c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &727172639
-BoxCollider2D:
+--- !u!114 &727172639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 727172635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bbb918d1dc084b68a3227da2289a6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalSprite: {fileID: 21300000, guid: 081c36b9d6bd745458a45948d080fdfd, type: 3}
+  newSprite: {fileID: 21300000, guid: 633176e4daa204e169b6f037ef080fb5, type: 3}
+--- !u!60 &727172640
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -355,11 +369,30 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 0.79999995, y: 0.8}
+  m_Points:
+    m_Paths:
+    - - {x: 2.835, y: 0.83}
+      - {x: -2.7649999, y: 0.83}
+      - {x: -3.205, y: 0.42}
+      - {x: -3.205, y: -0.51}
+      - {x: -2.885, y: -0.83}
+      - {x: 2.7649999, y: -0.83}
+      - {x: 3.165, y: -0.66999996}
+      - {x: 3.225, y: -0.41}
+      - {x: 3.225, y: 0.58}
+    - - {x: -3.675, y: 0.37}
+      - {x: -3.675, y: -0.38}
+      - {x: -3.415, y: -0.38}
+      - {x: -3.415, y: 0.37}
+    - - {x: 3.425, y: 0.35}
+      - {x: 3.425, y: -0.35999998}
+      - {x: 3.445, y: -0.38}
+      - {x: 3.675, y: -0.38}
+      - {x: 3.675, y: 0.37}
+      - {x: 3.445, y: 0.37}
 --- !u!1 &1698351790
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +403,7 @@ GameObject:
   - component: {fileID: 1698351792}
   - component: {fileID: 1698351791}
   m_Layer: 0
-  m_Name: Square (2)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
