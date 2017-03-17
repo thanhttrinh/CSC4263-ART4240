@@ -6,6 +6,6 @@ public class LaneChange : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		other.gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+		other.gameObject.transform.position = new Vector3(-2,-4,0);
 	}
 }
