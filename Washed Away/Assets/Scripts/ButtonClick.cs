@@ -4,42 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ButtonClick : MonoBehaviour {
-	
-	public Sprite originalSprite;
-	public Sprite newSprite;
-
-	private SpriteRenderer spriteRenderer;
-
-	bool click;
-
-	void Start()
-	{
-		spriteRenderer = GetComponent<SpriteRenderer> ();
-		if (spriteRenderer.sprite == null) {
-			spriteRenderer.sprite = originalSprite;
-		}
-	}
-
-	void Update()
-	{
-		if(Input.GetMouseButton(0)){
-			SpriteChange ();
-		}
-	}
-
-	void SpriteChange()
-	{
-		if (spriteRenderer.sprite == originalSprite) 
-		{
-			spriteRenderer.sprite = newSprite;
-		} 
-		else 
-		{
-			spriteRenderer.sprite = originalSprite;
-		}
-	}
-
-    private void OnMouseUp()
+    private void OnMouseDown()
     {
         SceneManager.LoadScene("Sewer");
         //upon clicking the game object, change the scene
