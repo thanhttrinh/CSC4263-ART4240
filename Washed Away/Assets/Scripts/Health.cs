@@ -15,8 +15,8 @@ public class Health : MonoBehaviour {
 	void Awake()
 	{
 		currentHP = startHP;
-		player = GameObject.FindGameObjectWithTag ("Player");
-		playerMovement = player.GetComponent <PlayerMovement>();
+		player = GameObject.FindGameObjectWithTag ("Player"); 
+		playerMovement = player.GetComponent <PlayerMovement>();	//get the player movement script
 	}
 
 	void Update()
@@ -36,24 +36,10 @@ public class Health : MonoBehaviour {
 				Death ();
 			}
 		}
-		/*
-		if (playerHit && currentHP <= 75) {
-			Destroy (GameObject.Find("Heart4"));
-		}
-		if(playerHit == player && currentHP <= 50) {
-			Destroy (GameObject.Find("Heart3"));
-		}
-		if (playerHit == player && currentHP <= 25) {
-			Destroy (GameObject.Find("Heart2"));
-		}
-		if (playerHit == player && currentHP <= 0) {
-			Destroy (GameObject.Find("Heart"));
-			Death ();
-		}
-		*/
-		Debug.Log (currentHP);
+		//Debug.Log (currentHP);
 	}
 
+	//this method detect when the player trigger a damage event
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject == player) 
@@ -63,8 +49,9 @@ public class Health : MonoBehaviour {
 		}
 	}
 
+	//this function disable the player movement script
 	void Death ()
 	{
-		playerMovement.enabled = false;		//disable script for player movement
+		playerMovement.enabled = false;
 	}
 }
