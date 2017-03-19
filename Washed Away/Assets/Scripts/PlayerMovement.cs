@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 	private CircleCollider2D cirlceCollider;
 	private Rigidbody2D rigidBody;
 	float movespeed = 2.0f;
+    public int DashSupply = 30;
 
 	void Update () 
 	{
@@ -23,21 +24,33 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
 			transform.position += Vector3.right * movespeed * Time.deltaTime;
 		}
-        if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
+        if (DashSupply >= 0)
         {
-            transform.position += Vector3.up * movespeed * Time.deltaTime * 2.0f;
+            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
+            {
+                transform.position += Vector3.up * movespeed * Time.deltaTime * 2.0f;
+                DashSupply = DashSupply - 10;
+            }
+            if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift))
+            {
+                transform.position += Vector3.left * movespeed * Time.deltaTime * 2.0f;
+                DashSupply = DashSupply - 10;
+            }
+            if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.LeftShift))
+            {
+                transform.position += Vector3.down * movespeed * Time.deltaTime * 2.0f;
+                DashSupply = DashSupply - 10;
+            }
+            if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
+            {
+                transform.position += Vector3.right * movespeed * Time.deltaTime * 2.0f;
+                DashSupply = DashSupply - 10;
+            }
         }
-        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift))
+        if(Time.time - Time.deltaTime >= 3f)
         {
-            transform.position += Vector3.left * movespeed * Time.deltaTime * 2.0f;
-        }
-        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.LeftShift))
-        {
-            transform.position += Vector3.down * movespeed * Time.deltaTime * 2.0f;
-        }
-        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
-        {
-            transform.position += Vector3.right * movespeed * Time.deltaTime * 2.0f;
+            DashSupply = 30;
+            Debug.Log("DashSupply has been reset");
         }
     }
 }
