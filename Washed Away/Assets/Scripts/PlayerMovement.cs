@@ -30,16 +30,5 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
 			transform.position += Vector3.right * movespeed * Time.deltaTime;
 		}
-		//if player hold space and D, the game object will jump right
-		if (Input.GetKeyDown (KeyCode.D) && Input.GetKeyDown (KeyCode.Space)) 
-		{
-			
-		}
-		//if player hold space and A, the game object will jump left
-		if (Input.GetKeyDown (KeyCode.D) && Input.GetKeyDown (KeyCode.Space)) 
-		{
-
-		}
-	
 	}
 }
