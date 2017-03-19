@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 	private Rigidbody2D rigidBody;
 	float movespeed = 2.0f;
     public int DashSupply = 30;
+    private float nextActionTime = 0f;
+    public float period = 3f;
 
 	void Update () 
 	{
@@ -47,8 +49,9 @@ public class PlayerMovement : MonoBehaviour
                 DashSupply = DashSupply - 10;
             }
         }
-        if(Time.time - Time.deltaTime >= 3f)
+        if (Time.time > nextActionTime)
         {
+            nextActionTime += period;
             DashSupply = 30;
             Debug.Log("DashSupply has been reset");
         }
