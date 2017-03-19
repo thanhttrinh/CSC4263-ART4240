@@ -14,7 +14,6 @@ public class Dash : MonoBehaviour {
     {
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
     }
-
     void Update()
     {
         switch (dashState)
@@ -48,7 +47,6 @@ public class Dash : MonoBehaviour {
         }
     }
 }
-
 public enum DashState
 {
     Ready,
