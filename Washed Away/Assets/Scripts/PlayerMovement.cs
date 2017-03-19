@@ -23,5 +23,21 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
 			transform.position += Vector3.right * movespeed * Time.deltaTime;
 		}
-	}
+        if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
+        {
+            transform.position += Vector3.up * movespeed * Time.deltaTime * 2.0f;
+        }
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift))
+        {
+            transform.position += Vector3.left * movespeed * Time.deltaTime * 2.0f;
+        }
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.LeftShift))
+        {
+            transform.position += Vector3.down * movespeed * Time.deltaTime * 2.0f;
+        }
+        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
+        {
+            transform.position += Vector3.right * movespeed * Time.deltaTime * 2.0f;
+        }
+    }
 }
