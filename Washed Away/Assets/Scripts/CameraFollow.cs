@@ -19,6 +19,6 @@ public class CameraFollow : MonoBehaviour {
 
 		// camera is fixed on x-coordinate
 		// follows player as player moves its y-coordinate
-		transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
+		transform.position = new Vector3(transform.position.x, player.transform.position.y + 0.5f, transform.position.z);
 	}
 }
