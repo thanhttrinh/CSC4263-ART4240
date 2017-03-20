@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ChangeLane : MonoBehaviour {
 	
-	void OnTriggerExit2D(Collider2D other)
+	void OnTriggerEnter2D(Collider2D other)
 	{
 		Vector3 prevPosition = other.gameObject.transform.position;
-		other.gameObject.transform.position = new Vector3 (prevPosition.x + 5, -8, 0);
+		other.gameObject.transform.position = new Vector3 (prevPosition.x, -4.7f, 0);
 	}
 }
