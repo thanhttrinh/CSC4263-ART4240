@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private float nextActionTime = 0f;
     public float period = 3f;
 
+	public bool backKey;
+
 	void Update () 
 	{
 		if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) 
@@ -20,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
 			transform.position += Vector3.left * movespeed * Time.deltaTime;
 		}
-		if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
+		if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && backKey != false) {
 			transform.position += Vector3.down * movespeed * Time.deltaTime;
 		}
 		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
