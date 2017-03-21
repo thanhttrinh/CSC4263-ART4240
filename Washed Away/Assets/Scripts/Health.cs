@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
 
@@ -53,5 +54,6 @@ public class Health : MonoBehaviour {
 	void Death ()
 	{
 		playerMovement.enabled = false;
-	}
+        SceneManager.LoadScene("GameOver");
+    }
 }
