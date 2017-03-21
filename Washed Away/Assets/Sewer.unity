@@ -6453,6 +6453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 636676876}
   - component: {fileID: 636676875}
+  - component: {fileID: 636676877}
   m_Layer: 0
   m_Name: Water Boundary
   m_TagString: Untagged
@@ -6469,7 +6470,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -6487,6 +6488,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &636676877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 636676874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6e80a2e914a426fb39d2dcdc1347a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHP: 100
+  currentHP: 0
 --- !u!1001 &644674312
 Prefab:
   m_ObjectHideFlags: 0
@@ -12701,6 +12715,18 @@ MonoBehaviour:
   dashTimer: 0
   maxDash: 20
   savedVelocity: {x: 0, y: 0}
+--- !u!114 &1341696563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1341696560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b03e80c48ce89f419724184fc1e3911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterLane: {fileID: 636676875}
 --- !u!95 &1341696565 stripped
 Animator:
   m_PrefabParentObject: {fileID: 95375188501519382, guid: 6289e98726e8747bdac2ed43f036e82b,
