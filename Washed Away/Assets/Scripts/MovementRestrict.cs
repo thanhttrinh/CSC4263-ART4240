@@ -17,7 +17,7 @@ public class MovementRestrict : MonoBehaviour {
 	{
 		if (other.gameObject == player) {
 			playerMovement.backKey = false;
-			//Debug.Log ("entered");
+			Debug.Log ("entered");
 		}
 	}
 }
