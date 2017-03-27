@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () 
 	{
 		rigidBody = GetComponent<Rigidbody2D> ();
+		backKey = true;
 	}
 
 	void Update () 
@@ -33,12 +34,13 @@ public class PlayerController : MonoBehaviour {
 			lastMove = new Vector2 (Input.GetAxisRaw ("Horizontal"), 0f);
 		}
 		//if A or D is pressed, a force will be applied in the Vertical direction
-		if (Input.GetAxisRaw ("Vertical") > 0.5f || Input.GetAxisRaw ("Vertical") < -0.5f) 
+		if (Input.GetAxisRaw ("Vertical") > 0.5f || (Input.GetAxisRaw ("Vertical") < -0.5f && backKey == true)) 
 		{
 			rigidBody.velocity = new Vector2 (rigidBody.velocity.x, Input.GetAxisRaw ("Vertical") * moveSpeed * Time.deltaTime);
 			playerMoving = true;
 			lastMove = new Vector2 (0f, Input.GetAxisRaw ("Vertical"));
 		}
+		// If force is between -0.5 and 0.5 then player will not move
 		if (Input.GetAxisRaw ("Horizontal") < 0.5f && Input.GetAxisRaw ("Horizontal") > -0.5f) 
 		{
 			rigidBody.velocity = new Vector2 (0f, rigidBody.velocity.y);

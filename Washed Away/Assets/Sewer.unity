@@ -13030,7 +13030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8978f544c35c4064089fd69c29fc6e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 50
+  moveSpeed: 40
   DashSupply: 30
   period: 3
   backKey: 0
