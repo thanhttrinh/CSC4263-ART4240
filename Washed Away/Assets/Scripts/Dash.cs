@@ -4,52 +4,39 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour {
 
-    public DashState dashState;
-    public float dashTimer;
-    public float maxDash = 20f;
-    Rigidbody2D rigidbody;
-    public Vector2 savedVelocity;
+    private CircleCollider2D cirlceCollider;
+    private Rigidbody2D rigidBody;
+    public static float movespeed = PlayerController.moveSpeed;
+    public int DashSupply = 100;
+    private float nextActionTime = 0f;
+    public float period = 10f;
 
     private void Start()
     {
-        rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        rigidBody = gameObject.GetComponent<Rigidbody2D>();
     }
     void Update()
     {
-        switch (dashState)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            case DashState.Ready:
-                var isDashKeyDown = Input.GetKeyDown(KeyCode.LeftShift);
-                if (isDashKeyDown)
-                {
-                    savedVelocity = rigidbody.velocity;
-                    rigidbody.velocity = new Vector2(rigidbody.velocity.x * 3f, rigidbody.velocity.y);
-                    dashState = DashState.Dashing;
-                }
-                break;
-            case DashState.Dashing:
-                dashTimer += Time.deltaTime * 3;
-                if (dashTimer >= maxDash)
-                {
-                    dashTimer = maxDash;
-                    rigidbody.velocity = savedVelocity;
-                    dashState = DashState.Cooldown;
-                }
-                break;
-            case DashState.Cooldown:
-                dashTimer -= Time.deltaTime;
-                if (dashTimer <= 0)
-                {
-                    dashTimer = 0;
-                    dashState = DashState.Ready;
-                }
-                break;
+            if (DashSupply >= 0)
+            {
+                dashActive();
+            }
+        }
+        if (Time.time > nextActionTime)
+        {
+            nextActionTime += period;
+            DashSupply = 100;
+            Debug.Log("DashSupply has been reset");
         }
     }
-}
-public enum DashState
-{
-    Ready,
-    Dashing,
-    Cooldown
+    void dashActive()
+    {
+        while (Input.GetKey(KeyCode.LeftShift))
+        {
+            movespeed = movespeed * 2.0f;
+            DashSupply = DashSupply - 10;
+        }
+    }
 }
