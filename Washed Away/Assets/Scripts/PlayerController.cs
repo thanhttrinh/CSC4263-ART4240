@@ -16,38 +16,42 @@ public class PlayerController : MonoBehaviour {
 	public float period = 3f;
 
 	public bool backKey;
+	public bool movements;
 
 	void Start () 
 	{
 		rigidBody = GetComponent<Rigidbody2D> ();
 		backKey = true;
+		movements = true;
 	}
 
 	void Update () 
 	{
 		playerMoving = false;
-		//if W or S is pressed, a force will be applied in the Horizontal direction
-		if (Input.GetAxisRaw ("Horizontal") > 0.5f || Input.GetAxisRaw ("Horizontal") < -0.5f) 
-		{
+			//if W or S is pressed, a force will be applied in the Horizontal direction
+		if (Input.GetAxisRaw ("Horizontal") > 0.5f || Input.GetAxisRaw ("Horizontal") < -0.5f) {
 			rigidBody.velocity = new Vector2 (Input.GetAxisRaw ("Horizontal") * moveSpeed * Time.deltaTime, rigidBody.velocity.y);
 			playerMoving = true;
 			lastMove = new Vector2 (Input.GetAxisRaw ("Horizontal"), 0f);
 		}
 		//if A or D is pressed, a force will be applied in the Vertical direction
-		if (Input.GetAxisRaw ("Vertical") > 0.5f || (Input.GetAxisRaw ("Vertical") < -0.5f && backKey == true)) 
-		{
+		if (Input.GetAxisRaw ("Vertical") > 0.5f || (Input.GetAxisRaw ("Vertical") < -0.5f && backKey == true)) {
 			rigidBody.velocity = new Vector2 (rigidBody.velocity.x, Input.GetAxisRaw ("Vertical") * moveSpeed * Time.deltaTime);
 			playerMoving = true;
 			lastMove = new Vector2 (0f, Input.GetAxisRaw ("Vertical"));
 		}
 		// If force is between -0.5 and 0.5 then player will not move
-		if (Input.GetAxisRaw ("Horizontal") < 0.5f && Input.GetAxisRaw ("Horizontal") > -0.5f) 
-		{
+		if (Input.GetAxisRaw ("Horizontal") < 0.5f && Input.GetAxisRaw ("Horizontal") > -0.5f) {
 			rigidBody.velocity = new Vector2 (0f, rigidBody.velocity.y);
 		}
-		if (Input.GetAxisRaw ("Vertical") < 0.5f && Input.GetAxisRaw ("Vertical") > -0.5f) 
-		{
-			rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0f);
+		if (Input.GetAxisRaw ("Vertical") < 0.5f && Input.GetAxisRaw ("Vertical") > -0.5f) {
+			rigidBody.velocity = new Vector2 (rigidBody.velocity.x, 0f);
+		}
+
+		//STOP THE PLAYER MOVEMENTS ALL TOGETHER
+		if (movements == false) {
+			rigidBody.velocity = new Vector2 (0f, rigidBody.velocity.y);
+			rigidBody.velocity = new Vector2 (rigidBody.velocity.x, 0f);
 		}
 
 		if (DashSupply >= 0)
@@ -77,7 +81,9 @@ public class PlayerController : MonoBehaviour {
 		{
 			nextActionTime += period;
 			DashSupply = 30;
-			Debug.Log("DashSupply has been reset");
+			//Debug.Log("DashSupply has been reset");
 		}
+
 	}
 }
+
