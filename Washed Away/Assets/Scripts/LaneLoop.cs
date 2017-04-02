@@ -30,7 +30,7 @@ public class LaneLoop : MonoBehaviour {
 		if (counter <= 3) 
 		{
 			Vector3 prevPosition = other.gameObject.transform.position;
-			other.gameObject.transform.position = new Vector3 (prevPosition.x, -4.7f, 0);
+			other.gameObject.transform.position = new Vector3 (prevPosition.x, -7.5f, 0);
 
 			//for testing
 			//other.gameObject.transform.position = new Vector3 (prevPosition.x, 55f, 0);
