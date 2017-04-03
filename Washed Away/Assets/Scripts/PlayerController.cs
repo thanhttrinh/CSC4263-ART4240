@@ -27,26 +27,27 @@ public class PlayerController : MonoBehaviour {
 
 	void Update () 
 	{
-		playerMoving = false;
-			//if W or S is pressed, a force will be applied in the Horizontal direction
+		playerMoving = true;
+		rigidBody.velocity = new Vector2 (rigidBody.velocity.x, moveSpeed * Time.deltaTime);
+			//if A or D is pressed, a force will be applied in the Horizontal direction
 		if (Input.GetAxisRaw ("Horizontal") > 0.5f || Input.GetAxisRaw ("Horizontal") < -0.5f) {
 			rigidBody.velocity = new Vector2 (Input.GetAxisRaw ("Horizontal") * moveSpeed * Time.deltaTime, rigidBody.velocity.y);
-			playerMoving = true;
+			//playerMoving = true;
 			lastMove = new Vector2 (Input.GetAxisRaw ("Horizontal"), 0f);
 		}
-		//if A or D is pressed, a force will be applied in the Vertical direction
-		if (Input.GetAxisRaw ("Vertical") > 0.5f || (Input.GetAxisRaw ("Vertical") < -0.5f && backKey == true)) {
+		//if W or S is pressed, a force will be applied in the Vertical direction
+		/*if (Input.GetAxisRaw ("Vertical") > 0.5f || (Input.GetAxisRaw ("Vertical") < -0.5f && backKey == true)) {
 			rigidBody.velocity = new Vector2 (rigidBody.velocity.x, Input.GetAxisRaw ("Vertical") * moveSpeed * Time.deltaTime);
 			playerMoving = true;
 			lastMove = new Vector2 (0f, Input.GetAxisRaw ("Vertical"));
-		}
+		}*/
 		// If force is between -0.5 and 0.5 then player will not move
 		if (Input.GetAxisRaw ("Horizontal") < 0.5f && Input.GetAxisRaw ("Horizontal") > -0.5f) {
 			rigidBody.velocity = new Vector2 (0f, rigidBody.velocity.y);
 		}
-		if (Input.GetAxisRaw ("Vertical") < 0.5f && Input.GetAxisRaw ("Vertical") > -0.5f) {
+		/*if (Input.GetAxisRaw ("Vertical") < 0.5f && Input.GetAxisRaw ("Vertical") > -0.5f) {
 			rigidBody.velocity = new Vector2 (rigidBody.velocity.x, 0f);
-		}
+		}*/
 
 		//STOP THE PLAYER MOVEMENTS ALL TOGETHER
 		if (movements == false) {
