@@ -18,7 +18,7 @@ public class SceneTransition : MonoBehaviour {
 	{
 		if (enter) 
 		{
-			SceneManager.LoadScene("SewerPipes");
+			SceneManager.LoadScene("Yard");
 		}
 		else if (play) 
 		{

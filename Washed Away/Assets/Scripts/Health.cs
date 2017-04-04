@@ -8,16 +8,19 @@ public class Health : MonoBehaviour {
 
 	public int startHP = 100;	//player's starting hp
 	public int currentHP;		//player's hp after being damaged
-	bool playerHit;
+	bool playerHit = false;
 
-	PlayerMovement playerMovement;
-	GameObject player;
+	private PlayerController playerMovement;
+	private GameObject player;
 
-	void Awake()
+	private GameObject gameOver;
+
+	void Start()
 	{
 		currentHP = startHP;
 		player = GameObject.FindGameObjectWithTag ("Player"); 
-		playerMovement = player.GetComponent <PlayerMovement>();	//get the player movement script
+		playerMovement = player.GetComponent <PlayerController>();	//get the player controller script
+		gameOver = GameObject.Find ("GameOver");
 	}
 
 	void Update()
@@ -45,6 +48,7 @@ public class Health : MonoBehaviour {
 	{
 		if (other.gameObject == player) 
 		{
+			Debug.Log ("DMG TRIGGER : " + currentHP);
 			playerHit = true;
 			currentHP -= 25;
 		}
@@ -53,7 +57,9 @@ public class Health : MonoBehaviour {
 	//this function disable the player movement script
 	void Death ()
 	{
-		playerMovement.enabled = false;
-        SceneManager.LoadScene("GameOver");
+		playerMovement.movements = false;
+		//playerMovement.enabled = false;
+		//gameOver.gameObject.SetActive (true);
+        //SceneManager.LoadScene("GameOver");
 	}
 }
