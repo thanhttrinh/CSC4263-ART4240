@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4346028114586726}
   - component: {fileID: 212437137066540734}
-  - component: {fileID: 50085504603296938}
   - component: {fileID: 60971175597093298}
   m_Layer: 0
   m_Name: largepipe_left-dirty
@@ -36,32 +35,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1484637770142530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.23965, y: 5.708569, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: -17.22, y: 5.708569, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50085504603296938
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1484637770142530}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!60 &60971175597093298
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -71,17 +50,30 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.01, y: 1.4}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
     m_Paths:
     - - {x: -1.505, y: 0.7}
-      - {x: -1.505, y: -0.7}
-      - {x: -0.59499997, y: -0.7}
+      - {x: -1.5050011, y: -0.770257}
+      - {x: -0.6862488, y: -0.76147556}
+      - {x: -0.673584, y: -0.5709553}
+      - {x: 0.6082344, y: -0.5671158}
       - {x: 1.505, y: -0.52}
       - {x: 1.505, y: 0.51}
-      - {x: -0.405, y: 0.7}
+      - {x: -0.67552185, y: 0.48969364}
+      - {x: -0.69532776, y: 0.69170475}
 --- !u!212 &212437137066540734
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -111,9 +103,14 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1639857897
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f9e3517461c8a4ca4a66c5f3e708d860, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0

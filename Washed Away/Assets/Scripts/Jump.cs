@@ -17,7 +17,7 @@ public class Jump : MonoBehaviour {
     IEnumerator Jumping()
     {
         waterLane.enabled = false;
-        yield return new WaitForSecondsRealtime(0.8f);
+        yield return new WaitForSecondsRealtime(1.5f);
         waterLane.enabled = true;
     }
     
