@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Middle Path
+    uniqueID: 1771139459
+    locked: 0
+  - name: Background
+    uniqueID: 2285379039
+    locked: 0
+  - name: Rushing Water
+    uniqueID: 2084380695
+    locked: 0
+  - name: Obstacles
+    uniqueID: 2655109399
+    locked: 0
+  - name: Trash
+    uniqueID: 4157315909
+    locked: 0
+  - name: Player
+    uniqueID: 3525022831
+    locked: 0
