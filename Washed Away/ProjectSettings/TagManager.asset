@@ -47,9 +47,6 @@ TagManager:
   - name: Background
     uniqueID: 2285379039
     locked: 0
-  - name: Rushing Water
-    uniqueID: 2084380695
-    locked: 0
   - name: Obstacles
     uniqueID: 2655109399
     locked: 0
@@ -58,4 +55,13 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3525022831
+    locked: 0
+  - name: Rushing Water
+    uniqueID: 2084380695
+    locked: 0
+  - name: WaterMist
+    uniqueID: 2408471579
+    locked: 0
+  - name: SmallPipes
+    uniqueID: 938001657
     locked: 0

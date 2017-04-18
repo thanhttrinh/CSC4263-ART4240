@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4346028114586726}
   - component: {fileID: 212437137066540734}
-  - component: {fileID: 60971175597093298}
+  - component: {fileID: 114788134098323722}
+  - component: {fileID: 60835564269735058}
   m_Layer: 0
   m_Name: largepipe_left-dirty
   m_TagString: Untagged
@@ -35,13 +36,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1484637770142530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.22, y: 5.708569, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: -16.905, y: 5.708569, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60971175597093298
+--- !u!60 &60835564269735058
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -57,7 +58,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.01, y: 1.4}
+    oldSize: {x: 2.1, y: 0.88}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -65,15 +66,26 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.505, y: 0.7}
-      - {x: -1.5050011, y: -0.770257}
-      - {x: -0.6862488, y: -0.76147556}
-      - {x: -0.673584, y: -0.5709553}
-      - {x: 0.6082344, y: -0.5671158}
-      - {x: 1.505, y: -0.52}
-      - {x: 1.505, y: 0.51}
-      - {x: -0.67552185, y: 0.48969364}
-      - {x: -0.69532776, y: 0.69170475}
+    - - {x: 1.05, y: 0.32}
+      - {x: -0.45, y: 0.32999998}
+      - {x: -0.62, y: 0.44}
+      - {x: -1.05, y: 0.44}
+      - {x: -1.05, y: -0.44}
+      - {x: -0.63, y: -0.44}
+      - {x: -0.62, y: -0.32999998}
+      - {x: 0.98999995, y: -0.34}
+      - {x: 1.05, y: -0.32}
+--- !u!114 &114788134098323722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1484637770142530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7daa2ca7a9260214d8cd1f0311826eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212437137066540734
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -104,9 +116,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1639857897
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f9e3517461c8a4ca4a66c5f3e708d860, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25c52772f43624241abe4c21073ccda8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
