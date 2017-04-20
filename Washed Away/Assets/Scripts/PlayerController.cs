@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () 
 	{
 		rigidBody.velocity = new Vector2 (rigidBody.velocity.x, moveSpeed * Time.deltaTime);
-		moveSpeed += 0.01f;
+		moveSpeed += 0.025f;
 			//if A or D is pressed, a force will be applied in the Horizontal direction
 		if (Input.GetAxisRaw ("Horizontal") > 0.5f || 
 			Input.GetAxisRaw ("Horizontal") < -0.5f) 
