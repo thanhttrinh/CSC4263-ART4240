@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4102134449400856}
   - component: {fileID: 212846118314419768}
   - component: {fileID: 60668762957700550}
-  - component: {fileID: 114021398085240568}
   - component: {fileID: 114479144861330988}
+  - component: {fileID: 114422247322082628}
   m_Layer: 0
   m_Name: bush1_left
-  m_TagString: Untagged
+  m_TagString: GrassDMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +36,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1720699847513500}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -133,7 +133,7 @@ PolygonCollider2D:
       - {x: 0.72999996, y: -0.85499996}
       - {x: 0.75, y: -0.79499996}
       - {x: 0.87, y: -0.78499997}
---- !u!114 &114021398085240568
+--- !u!114 &114422247322082628
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

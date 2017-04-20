@@ -9,19 +9,18 @@ public class PlayerReset : MonoBehaviour {
 
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
-		prevPosition = player.gameObject.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		prevPosition = player.gameObject.transform.position;
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject == player) 
 		{
-			other.gameObject.transform.position = new Vector3 (prevPosition.x, prevPosition.y, 0);
+			other.gameObject.transform.position = new Vector3 (prevPosition.x, prevPosition.y - 2.0f, 0);
 		}
 	}
 		

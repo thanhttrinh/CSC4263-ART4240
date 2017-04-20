@@ -8,51 +8,53 @@ public class Health : MonoBehaviour {
 
 	public int startHP = 100;	//player's starting hp
 	public int currentHP;		//player's hp after being damaged
-	bool playerHit = false;
 
 	private PlayerController playerMovement;
 	private GameObject player;
 
-	private GameObject gameOver;
+	//private GameObject gameOver;
 	private Animator playerAnim;
+
 
 	void Start()
 	{
 		currentHP = startHP;
 		player = GameObject.FindGameObjectWithTag ("Player"); 
 		playerMovement = player.GetComponent <PlayerController>();	//get the player controller script
-		gameOver = GameObject.Find ("GameOver");
+		//gameOver = GameObject.Find ("GameOver");
 		playerAnim = player.GetComponent<Animator> ();
 	}
 
 	void Update()
 	{
-		if (playerHit) {
-			if (currentHP <= 75 && currentHP > 50) {
-				Destroy (GameObject.Find ("Heart4"));
-			}
-			else if (currentHP <= 50 && currentHP > 25) {
-				Destroy (GameObject.Find ("Heart3"));
-			}
-			else if (currentHP <= 25 && currentHP > 0) {
-				Destroy (GameObject.Find ("Heart2"));
-			}
-			else if (currentHP == 0) {
-				Destroy (GameObject.Find ("Heart"));
-				Death ();
-			}
-		}
-		//Debug.Log (currentHP);
+
 	}
 
-	//this method detect when the player trigger a damage event
+	//this function detect when the player trigger a damage event
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject == player) 
 		{
-			Debug.Log ("DMG TRIGGER : " + currentHP);
-			playerHit = true;
 			currentHP -= 25;
+			Debug.Log ("DMG TRIGGER : " + currentHP);
+
+			if (currentHP <= 75 && currentHP > 50) 
+			{
+				Destroy (GameObject.Find ("Heart4"));
+			}
+			if (currentHP <= 50 && currentHP > 25) 
+			{
+				Destroy (GameObject.Find ("Heart3"));
+			}
+			if (currentHP <= 25 && currentHP > 0) 
+			{
+				Destroy (GameObject.Find ("Heart2"));
+			}
+			if (currentHP == 0) 
+			{
+				Destroy (GameObject.Find ("Heart"));
+				Death ();
+			}
 		}
 	}
 

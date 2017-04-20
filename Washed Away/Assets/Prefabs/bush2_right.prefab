@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4686203357946570}
   - component: {fileID: 212026741850145672}
   - component: {fileID: 60101722319164456}
-  - component: {fileID: 114800047247320216}
   - component: {fileID: 114401575148752176}
+  - component: {fileID: 114710355456590052}
   m_Layer: 0
   m_Name: bush2_right
-  m_TagString: Untagged
+  m_TagString: GrassDMG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7daa2ca7a9260214d8cd1f0311826eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114800047247320216
+--- !u!114 &114710355456590052
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

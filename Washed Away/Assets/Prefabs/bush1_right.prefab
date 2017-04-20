@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4852189911605034}
   - component: {fileID: 212627171360361772}
   - component: {fileID: 60565702176248762}
-  - component: {fileID: 114510220783117884}
   - component: {fileID: 114483102525561536}
+  - component: {fileID: 114781296858253272}
   m_Layer: 0
   m_Name: bush1_right
   m_TagString: Untagged
@@ -36,8 +36,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1238110806019790}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 50, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7daa2ca7a9260214d8cd1f0311826eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114510220783117884
+--- !u!114 &114781296858253272
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
