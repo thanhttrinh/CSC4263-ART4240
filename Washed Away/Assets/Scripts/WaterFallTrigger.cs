@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WaterFallTrigger : MonoBehaviour {
 	public GameObject water;
+	SpriteRenderer renderer;
+	Rigidbody2D rigidbody;
 
 	// Use this for initialization
 	void Start () {
@@ -15,8 +17,9 @@ public class WaterFallTrigger : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter2D(Collider2D other) {
-		//if(water.GetComponent<SpriteRenderer>.enabled == false)
-		//	water.GetComponent<SpriteRenderer>.enabled = true;
-		//water.GetComponent<Rigidbody2D>.gravityScale = 0.5;
+		if (other.gameObject.tag == "Player") {
+			water.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
+			water.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.25f;
+		}
 	}
 }
