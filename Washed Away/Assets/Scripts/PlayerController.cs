@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () 
 	{
 		rigidBody.velocity = new Vector2 (rigidBody.velocity.x, moveSpeed * Time.deltaTime);
-		moveSpeed += 0.025f;
+		moveSpeed += 0.01f;
 			//if A or D is pressed, a force will be applied in the Horizontal direction
 		if (Input.GetAxisRaw ("Horizontal") > 0.5f || 
 			Input.GetAxisRaw ("Horizontal") < -0.5f) 
@@ -39,8 +39,13 @@ public class PlayerController : MonoBehaviour {
 			rigidBody.velocity = new Vector2 (Input.GetAxisRaw ("Horizontal") * moveSpeed * Time.deltaTime, rigidBody.velocity.y);
 			lastMove = new Vector2 (Input.GetAxisRaw ("Horizontal"), 0f);
 		}
+		// If force is between -0.5 and 0.5 then player will not move
+		if (Input.GetAxisRaw ("Horizontal") < 0.5f && 
+			Input.GetAxisRaw ("Horizontal") > -0.5f) 
+		{
+			rigidBody.velocity = new Vector2 (0f, rigidBody.velocity.y);
+		}
 
-		//D or A pressed with Space will pushes the player 6 unit to the left or right
 		if (Input.GetKey(KeyCode.D) &&
 			Input.GetKey (KeyCode.Space)) 
 		{
@@ -53,7 +58,6 @@ public class PlayerController : MonoBehaviour {
 			rigidBody.velocity = new Vector2 (rigidBody.velocity.x - 6.0f, rigidBody.velocity.y);
 		}
 
-		//if W and LeftShift is pressed then player get pushed 5 unit upward
 		if(Input.GetKey(KeyCode.W) &&
 			Input.GetKey(KeyCode.LeftShift))
 			{
