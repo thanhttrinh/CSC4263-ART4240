@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 95962174627601300}
   - component: {fileID: 50374893136703810}
   - component: {fileID: 61118989080655178}
+  - component: {fileID: 114228765693245038}
   m_Layer: 0
   m_Name: FallingWater 1
   m_TagString: RunningWater
@@ -94,6 +95,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114228765693245038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1174379012967962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6e80a2e914a426fb39d2dcdc1347a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHP: 100
+  currentHP: 0
 --- !u!212 &212007489028984704
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -124,7 +138,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1639857897
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: f98eccba654a74b4990582184ea6baaf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

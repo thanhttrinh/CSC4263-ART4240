@@ -22,13 +22,13 @@ public class WaterFallTrigger : MonoBehaviour {
 		// the fly's warning sign should also be here
 
 		if (other.gameObject.tag == "Player") {
-			if (counter == 0) {
+			if (counter == 0 && water1 != null) {
 				water1.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				water1.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
-			} else if (counter == 1) {
+			} else if (counter == 1 && water2 != null) {
 				water2.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				water2.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
-			} else {
+			} else if(counter == 2 && water2 != null) {
 				water3.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				water3.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
 			}
