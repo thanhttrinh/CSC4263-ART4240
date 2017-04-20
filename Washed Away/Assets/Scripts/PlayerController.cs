@@ -58,8 +58,7 @@ public class PlayerController : MonoBehaviour {
 
 		if (DashSupply >= 0)
 		{
-			if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
-			{
+			if (Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.LeftShift)) {
 				transform.position += Vector3.up * moveSpeed * Time.deltaTime * 2.0f;
 				DashSupply = DashSupply - 10;
 			}
