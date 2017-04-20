@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4777661553755902}
   - component: {fileID: 61963698002265086}
+  - component: {fileID: 114930230813394284}
   m_Layer: 0
   m_Name: WaterFallTrigger
   m_TagString: Untagged
@@ -34,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1849084514818422}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 6, z: 1}
+  m_LocalPosition: {x: -0.27877045, y: 7.4585576, z: 0}
   m_LocalScale: {x: 5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,3 +55,15 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &114930230813394284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1849084514818422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78f8794e245c4db99d3f1f7c60385aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  water: {fileID: 0}

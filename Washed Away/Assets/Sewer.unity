@@ -14750,6 +14750,49 @@ Transform:
   m_PrefabParentObject: {fileID: 4258629301779048, guid: 4b44450bc955e467caa4fc101a768bdf,
     type: 2}
   m_PrefabInternal: {fileID: 1021442404}
+--- !u!1 &1032751072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1032751074}
+  - component: {fileID: 1032751073}
+  m_Layer: 0
+  m_Name: FallingWaterResetTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1032751073
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1032751072}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!4 &1032751074
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1032751072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.4052877, y: -8.09, z: 0}
+  m_LocalScale: {x: 5, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1033381906
 Prefab:
   m_ObjectHideFlags: 0
@@ -15938,6 +15981,11 @@ Prefab:
       propertyPath: m_Name
       value: WaterFallTrigger (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114930230813394284, guid: f13bce516bae740ecbeb1601505a9652,
+        type: 2}
+      propertyPath: water
+      value: 
+      objectReference: {fileID: 1190977962}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f13bce516bae740ecbeb1601505a9652, type: 2}
   m_IsPrefabParent: 0
@@ -16521,6 +16569,11 @@ Prefab:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 26bedb308e4451f42b80cfe5946ef40b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1128634475 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1174379012967962, guid: d50bebb8f1dad4b1abe5e2d93a84a1cd,
+    type: 2}
+  m_PrefabInternal: {fileID: 396436540}
 --- !u!1 &1129169997
 GameObject:
   m_ObjectHideFlags: 0
@@ -17152,6 +17205,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114930230813394284, guid: f13bce516bae740ecbeb1601505a9652,
+        type: 2}
+      propertyPath: water
+      value: 
+      objectReference: {fileID: 924756724}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f13bce516bae740ecbeb1601505a9652, type: 2}
   m_IsPrefabParent: 0
@@ -17160,23 +17218,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4777661553755902, guid: f13bce516bae740ecbeb1601505a9652,
     type: 2}
   m_PrefabInternal: {fileID: 1171568725}
---- !u!1 &1171568727 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1849084514818422, guid: f13bce516bae740ecbeb1601505a9652,
-    type: 2}
-  m_PrefabInternal: {fileID: 1171568725}
---- !u!114 &1171568728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1171568727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b78f8794e245c4db99d3f1f7c60385aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  water: {fileID: 924756724}
 --- !u!1001 &1172973096
 Prefab:
   m_ObjectHideFlags: 0
@@ -17433,6 +17474,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4596702336598396, guid: 15e034b196ddd6246b4dafa2d333aa30,
     type: 2}
   m_PrefabInternal: {fileID: 261375137}
+--- !u!1 &1190977962 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1174379012967962, guid: d50bebb8f1dad4b1abe5e2d93a84a1cd,
+    type: 2}
+  m_PrefabInternal: {fileID: 560646566}
 --- !u!1 &1194524871
 GameObject:
   m_ObjectHideFlags: 0
@@ -17442,6 +17488,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1194524873}
   - component: {fileID: 1194524872}
+  - component: {fileID: 1194524874}
   m_Layer: 0
   m_Name: DestroyFallingWaterTrigger
   m_TagString: Untagged
@@ -17470,12 +17517,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1194524871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.42, y: -8.41, z: 0}
-  m_LocalScale: {x: 7, y: 1, z: 1}
+  m_LocalPosition: {x: -7.5, y: -10, z: 0}
+  m_LocalScale: {x: 7, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1194524874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1194524871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0828b37de567f4264b53a3d93f47b4c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1200726507
 Prefab:
   m_ObjectHideFlags: 0
@@ -17584,6 +17642,11 @@ Prefab:
       propertyPath: m_Name
       value: WaterFallTrigger (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114930230813394284, guid: f13bce516bae740ecbeb1601505a9652,
+        type: 2}
+      propertyPath: water
+      value: 
+      objectReference: {fileID: 1946158562}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f13bce516bae740ecbeb1601505a9652, type: 2}
   m_IsPrefabParent: 0
@@ -23903,6 +23966,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4258629301779048, guid: 4b44450bc955e467caa4fc101a768bdf,
     type: 2}
   m_PrefabInternal: {fileID: 1653840618}
+--- !u!1 &1653986338 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1174379012967962, guid: d50bebb8f1dad4b1abe5e2d93a84a1cd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1618081389}
 --- !u!1001 &1655666506
 Prefab:
   m_ObjectHideFlags: 0
@@ -27356,7 +27424,7 @@ Transform:
   - {fileID: 1839040640}
   - {fileID: 836512438}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1884257934
 Prefab:
@@ -28069,6 +28137,11 @@ Prefab:
       propertyPath: m_Name
       value: WaterFallTrigger (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114930230813394284, guid: f13bce516bae740ecbeb1601505a9652,
+        type: 2}
+      propertyPath: water
+      value: 
+      objectReference: {fileID: 1128634475}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f13bce516bae740ecbeb1601505a9652, type: 2}
   m_IsPrefabParent: 0
@@ -28077,6 +28150,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4777661553755902, guid: f13bce516bae740ecbeb1601505a9652,
     type: 2}
   m_PrefabInternal: {fileID: 1930465300}
+--- !u!1 &1930978725 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1174379012967962, guid: d50bebb8f1dad4b1abe5e2d93a84a1cd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1945346754}
 --- !u!1001 &1933771076
 Prefab:
   m_ObjectHideFlags: 0
@@ -28240,6 +28318,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4889772247961700, guid: d50bebb8f1dad4b1abe5e2d93a84a1cd,
     type: 2}
   m_PrefabInternal: {fileID: 1945346754}
+--- !u!1 &1946158562 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1174379012967962, guid: d50bebb8f1dad4b1abe5e2d93a84a1cd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1611612719}
 --- !u!4 &1951038152 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4875263086188736, guid: 28eeb293df7044a2d8c5687619948a7a,
@@ -29678,6 +29761,11 @@ Prefab:
       propertyPath: m_Name
       value: WaterFallTrigger (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114930230813394284, guid: f13bce516bae740ecbeb1601505a9652,
+        type: 2}
+      propertyPath: water
+      value: 
+      objectReference: {fileID: 1653986338}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f13bce516bae740ecbeb1601505a9652, type: 2}
   m_IsPrefabParent: 0
@@ -31329,7 +31417,7 @@ Transform:
   - {fileID: 169619624}
   - {fileID: 97617200}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2133724486
 Prefab:
@@ -31504,6 +31592,11 @@ Prefab:
       propertyPath: m_Name
       value: WaterFallTrigger (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114930230813394284, guid: f13bce516bae740ecbeb1601505a9652,
+        type: 2}
+      propertyPath: water
+      value: 
+      objectReference: {fileID: 1930978725}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f13bce516bae740ecbeb1601505a9652, type: 2}
   m_IsPrefabParent: 0
