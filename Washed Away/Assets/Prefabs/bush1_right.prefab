@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4852189911605034}
   - component: {fileID: 212627171360361772}
   - component: {fileID: 60565702176248762}
-  - component: {fileID: 114483102525561536}
   - component: {fileID: 114781296858253272}
   m_Layer: 0
   m_Name: bush1_right
@@ -54,17 +53,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.54, y: 1.79}
-    newSize: {x: 2.54, y: 1.79}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   m_Points:
     m_Paths:
     - - {x: 0.26, y: -0.85499996}
@@ -131,17 +120,6 @@ PolygonCollider2D:
       - {x: -0.95, y: -0.73499995}
       - {x: -0.7097949, y: -0.9213934}
       - {x: 0.23319662, y: -0.9279914}
---- !u!114 &114483102525561536
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1238110806019790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7daa2ca7a9260214d8cd1f0311826eaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114781296858253272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -153,8 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6e80a2e914a426fb39d2dcdc1347a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHP: 100
-  currentHP: 0
 --- !u!212 &212627171360361772
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -185,13 +161,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1983810907
-  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bc586732da9834ded91e85bb27c8f67f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 2.54, y: 1.79}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0

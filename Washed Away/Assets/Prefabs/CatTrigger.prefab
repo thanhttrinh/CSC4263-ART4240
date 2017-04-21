@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4229725612865438}
   - component: {fileID: 61506634104940252}
+  - component: {fileID: 114009714920731402}
   m_Layer: 0
   m_Name: CatTrigger
   m_TagString: Untagged
@@ -54,3 +55,15 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &114009714920731402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1520651500174106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88c32304d5034f099d4017db911521d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paw: {fileID: 0}
