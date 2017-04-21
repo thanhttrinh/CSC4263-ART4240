@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaneLoop : MonoBehaviour {
 
-	private int counter;
+	private int counter = 0;
 	private bool enter;
 
 	private BoxCollider2D trigger;
