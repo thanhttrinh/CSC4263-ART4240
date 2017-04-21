@@ -31,7 +31,6 @@ public class WaterFallTrigger : MonoBehaviour {
 				water1.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				water1.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
 
-				foam1.gameObject.GetComponent<BoxCollider2D> ().enabled = true;
 				foam1.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				foam1.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
 			} else if (counter == 1 && water2 != null && foam2 != null) {
@@ -39,7 +38,6 @@ public class WaterFallTrigger : MonoBehaviour {
 				water2.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				water2.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
 
-				foam2.gameObject.GetComponent<BoxCollider2D> ().enabled = true;
 				foam2.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				foam2.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
 			} else if(counter == 2 && water2 != null && foam3 != null) {
@@ -47,7 +45,6 @@ public class WaterFallTrigger : MonoBehaviour {
 				water3.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				water3.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
 
-				foam3.gameObject.GetComponent<BoxCollider2D> ().enabled = true;
 				foam3.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				foam3.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
 			}
