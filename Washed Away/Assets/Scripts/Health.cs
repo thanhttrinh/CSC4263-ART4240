@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
 
-	public int startHP = 100;	//player's starting hp
-	public int currentHP;		//player's hp after being damaged
+	public static int startHP = 100;	//player's starting hp
+	public static int currentHP;		//player's hp after being damaged
 
 	private PlayerController playerMovement;
 	private GameObject player;
@@ -38,15 +38,15 @@ public class Health : MonoBehaviour {
 			currentHP -= 25;
 			Debug.Log ("DMG TRIGGER : " + currentHP);
 
-			if (currentHP <= 75 && currentHP > 50) 
+			if (currentHP == 75) 
 			{
 				Destroy (GameObject.Find ("Heart4"));
 			}
-			if (currentHP <= 50 && currentHP > 25) 
+			if (currentHP == 50) 
 			{
 				Destroy (GameObject.Find ("Heart3"));
 			}
-			if (currentHP <= 25 && currentHP > 0) 
+			if (currentHP == 25) 
 			{
 				Destroy (GameObject.Find ("Heart2"));
 			}
