@@ -6,7 +6,6 @@ public class WaterFallTrigger : MonoBehaviour {
 	public GameObject water1;
 	public GameObject water2;
 	public GameObject water3;
-	public GameObject warning;
 
 	private int counter = 0;
 
@@ -23,7 +22,6 @@ public class WaterFallTrigger : MonoBehaviour {
 		// the fly's warning sign should also be here
 
 		if (other.gameObject.tag == "Player") {
-			warning.gameObject.GetComponent<SpriteRenderer>().enabled = true;
 			if (counter == 0 && water1 != null) {
 				water1.gameObject.GetComponent<BoxCollider2D> ().enabled = true;
 				water1.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
@@ -39,9 +37,5 @@ public class WaterFallTrigger : MonoBehaviour {
 			}
 			counter++;
 		}
-	}
-
-	void OnTriggerExit2D(Collider2D other) {
-		warning.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 	}
 }
