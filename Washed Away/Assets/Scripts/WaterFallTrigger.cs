@@ -8,6 +8,8 @@ public class WaterFallTrigger : MonoBehaviour {
 	public GameObject water3;
 
 	private int counter = 0;
+	Vector3 newPosition;
+	Vector3 negativePos;
 
 	// Use this for initialization
 	void Start () {
@@ -23,12 +25,15 @@ public class WaterFallTrigger : MonoBehaviour {
 
 		if (other.gameObject.tag == "Player") {
 			if (counter == 0 && water1 != null) {
+				water1.gameObject.GetComponent<BoxCollider2D> ().enabled = true;
 				water1.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				water1.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
 			} else if (counter == 1 && water2 != null) {
+				water2.gameObject.GetComponent<BoxCollider2D> ().enabled = true;
 				water2.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				water2.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
 			} else if(counter == 2 && water2 != null) {
+				water3.gameObject.GetComponent<BoxCollider2D> ().enabled = true;
 				water3.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				water3.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
 			}
