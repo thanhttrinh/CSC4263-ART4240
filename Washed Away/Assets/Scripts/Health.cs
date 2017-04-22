@@ -37,7 +37,6 @@ public class Health : MonoBehaviour {
 		if (other.gameObject == player) 
 		{
 			currentHP -= 25;
-			Debug.Log ("DMG TRIGGER : " + currentHP);
 
 			if (currentHP == 75) 
 			{

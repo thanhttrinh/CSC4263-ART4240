@@ -7,11 +7,13 @@ public class PopUpMenu : MonoBehaviour
 {
 	public GameObject pause;
 	public GameObject jump;
+	public GameObject dash;
 	public GameObject gameover;
 
 	private GameObject player;
 
 	public bool jumpShowing;
+	public bool dashShowing;
 	public bool isDead;
 	private bool isShowing;
 	private bool pauseToggle;
@@ -26,6 +28,7 @@ public class PopUpMenu : MonoBehaviour
 		PauseMenu ();
 		Jump ();
 		GameOver ();
+		Dash ();
 	}
 
 	void PauseMenu(){
@@ -56,6 +59,15 @@ public class PopUpMenu : MonoBehaviour
 			jump.SetActive (false);
 		}
 				
+	}
+
+	void Dash()
+	{
+		if (dashShowing == true) {
+			dash.SetActive (true);
+		} else {
+			dash.SetActive (false);
+		}
 	}
 		
 }

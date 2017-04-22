@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -17,7 +18,10 @@ public class PlayerController : MonoBehaviour {
 	public bool backKey;
 	public bool movements;
 
-	public GameObject player;
+	GameObject player;
+
+	Scene cureentScene;
+	private string sceneName;
 
 	void Start () 
 	{
@@ -26,6 +30,8 @@ public class PlayerController : MonoBehaviour {
 		movements = true;
 
 		player = GameObject.FindGameObjectWithTag ("Player");
+		cureentScene = SceneManager.GetActiveScene ();
+		sceneName = cureentScene.name;
 	}
 
 	void Update () 
@@ -46,6 +52,7 @@ public class PlayerController : MonoBehaviour {
 			rigidBody.velocity = new Vector2 (0f, rigidBody.velocity.y);
 		}
 
+		//JUMP
 		if (Input.GetKey(KeyCode.D) &&
 			Input.GetKey (KeyCode.Space)) 
 		{
@@ -58,11 +65,14 @@ public class PlayerController : MonoBehaviour {
 			rigidBody.velocity = new Vector2 (rigidBody.velocity.x - 7.0f, rigidBody.velocity.y);
 		}
 
-		if(Input.GetKey(KeyCode.W) &&
-			Input.GetKey(KeyCode.LeftShift))
+		//DASH
+		if (sceneName == "Yard") {
+			if (Input.GetKey (KeyCode.W) &&
+			  Input.GetKey (KeyCode.LeftShift)) 
 			{
 				rigidBody.velocity = new Vector2 (rigidBody.velocity.x, rigidBody.velocity.y + 5.0f);
 			}
+		}
 
 		//STOP THE PLAYER MOVEMENTS ALL TOGETHER
 		if (movements == false) {

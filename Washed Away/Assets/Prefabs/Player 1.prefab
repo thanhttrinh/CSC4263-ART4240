@@ -23,13 +23,11 @@ GameObject:
   - component: {fileID: 95850922187710668}
   - component: {fileID: 50336251182144400}
   - component: {fileID: 114801470642615010}
-  - component: {fileID: 60330274751948666}
   - component: {fileID: 114799028772151404}
   - component: {fileID: 114313228153736308}
   - component: {fileID: 114459305234758198}
+  - component: {fileID: 60330274751948666}
   - component: {fileID: 114065459856314636}
-  - component: {fileID: 114076513703343956}
-  - component: {fileID: 114609161602860294}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -44,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1207585939533542}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.97, y: -6, z: -1}
+  m_LocalPosition: {x: -7.423, y: -7, z: -1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -168,20 +166,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause: {fileID: 0}
   jump: {fileID: 0}
+  dash: {fileID: 0}
   gameover: {fileID: 0}
   jumpShowing: 0
---- !u!114 &114076513703343956
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1207585939533542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc6e80a2e914a426fb39d2dcdc1347a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  died: 0
+  dashShowing: 0
+  isDead: 0
 --- !u!114 &114313228153736308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,7 +187,6 @@ MonoBehaviour:
   period: 3
   backKey: 0
   movements: 0
-  player: {fileID: 0}
 --- !u!114 &114459305234758198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,18 +202,6 @@ MonoBehaviour:
   jump: 32
   left: 97
   right: 100
---- !u!114 &114609161602860294
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1207585939533542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc6e80a2e914a426fb39d2dcdc1347a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  died: 0
 --- !u!114 &114799028772151404
 MonoBehaviour:
   m_ObjectHideFlags: 1
