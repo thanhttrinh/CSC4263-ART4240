@@ -46,8 +46,6 @@ public class PopUpMenu : MonoBehaviour
 	void GameOver(){
 		if (isDead == true) {
 			gameover.SetActive (true);
-			Debug.Log ("died");
-			Time.timeScale = 0.5f;
 		}
 	}
 

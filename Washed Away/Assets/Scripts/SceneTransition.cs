@@ -51,6 +51,15 @@ public class SceneTransition : MonoBehaviour {
 			} 
 			else if (sceneName == "Yard") 
 			{
+				Time.timeScale = 0.5f;
+			}
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D other){
+		if (other.gameObject == player) {
+			if (sceneName == "Yard") {
+				Time.timeScale = 0;
 				end = true;
 			}
 		}
