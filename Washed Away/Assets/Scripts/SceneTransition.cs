@@ -8,11 +8,21 @@ public class SceneTransition : MonoBehaviour {
 
 	public bool enter;
 	public bool play;
+	public bool end;
+
+	PopUpMenu gameOver;
+
 	GameObject player;
+
+	Scene currentScene;
+	private string sceneName;
 
 	void Awake()
 	{
 		player = GameObject.FindGameObjectWithTag ("Player"); 
+		gameOver = player.GetComponent<PopUpMenu>();
+		currentScene = SceneManager.GetActiveScene ();
+		sceneName = currentScene.name;
 	}
 
 	void Update()
@@ -25,12 +35,25 @@ public class SceneTransition : MonoBehaviour {
 		{
 			Scene ("Sewer");
 		} 
+		else if (end) 
+		{
+			gameOver.isDead = true;
+		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if(other.gameObject == player)
-			enter = true;
+		if (other.gameObject == player) 
+		{
+			if (sceneName == "Sewer") 
+			{
+				enter = true;
+			} 
+			else if (sceneName == "Yard") 
+			{
+				end = true;
+			}
+		}
 	}
 
 	public void Scene(string scene){

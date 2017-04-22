@@ -29,7 +29,6 @@ GameObject:
   - component: {fileID: 114274640843377460}
   - component: {fileID: 114736738844510954}
   - component: {fileID: 114027100439600516}
-  - component: {fileID: 114180403835110824}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -44,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1554352045680444}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.97, y: -6, z: -1}
+  m_LocalPosition: {x: 1.97, y: 62, z: -1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -166,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6e80a2e914a426fb39d2dcdc1347a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  died: 0
+  gameOver: {fileID: 0}
 --- !u!114 &114032344960588082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,18 +177,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114180403835110824
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1554352045680444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc6e80a2e914a426fb39d2dcdc1347a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  died: 0
 --- !u!114 &114274640843377460
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,6 +224,7 @@ MonoBehaviour:
   jump: {fileID: 0}
   gameover: {fileID: 0}
   jumpShowing: 0
+  isDead: 0
 --- !u!114 &114793839162807486
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -14,7 +14,7 @@ public class Health : MonoBehaviour {
 
 	private Animator playerAnim;
 
-	public PopUpMenu gameOver;
+	PopUpMenu gameOver;
 
 
 	void Start()
@@ -65,6 +65,5 @@ public class Health : MonoBehaviour {
 		playerMovement.movements = false;
 		playerAnim.enabled = false;
 		gameOver.isDead = true;
-		Debug.Log ("hp death");
 	}
 }
