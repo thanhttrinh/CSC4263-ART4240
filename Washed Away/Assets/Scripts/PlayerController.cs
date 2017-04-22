@@ -49,13 +49,13 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKey(KeyCode.D) &&
 			Input.GetKey (KeyCode.Space)) 
 		{
-			rigidBody.velocity = new Vector2 (rigidBody.velocity.x + 6.0f, rigidBody.velocity.y);
+			rigidBody.velocity = new Vector2 (rigidBody.velocity.x + 7.0f, rigidBody.velocity.y);
 		}
 
 		if (Input.GetKey(KeyCode.A) &&
 			Input.GetKey (KeyCode.Space)) 
 		{
-			rigidBody.velocity = new Vector2 (rigidBody.velocity.x - 6.0f, rigidBody.velocity.y);
+			rigidBody.velocity = new Vector2 (rigidBody.velocity.x - 7.0f, rigidBody.velocity.y);
 		}
 
 		if(Input.GetKey(KeyCode.W) &&

@@ -6,20 +6,26 @@ using UnityEngine.UI;
 public class PopUpMenu : MonoBehaviour 
 {
 	public GameObject pause;
+	public GameObject jump;
+	public GameObject gameover;
+
+	private GameObject player;
+
+	public bool jumpShowing;
+	public bool isDead;
 	private bool isShowing;
 	private bool pauseToggle;
 
-	// Use this for initialization
 	void Start () 
 	{
-		Debug.Log (Time.timeScale);
 		pauseToggle = false;
 	}
 	
-	// Update is called once per frame
-	void Update () 
+	void Update ()
 	{
 		PauseMenu ();
+		Jump ();
+		GameOver ();
 	}
 
 	void PauseMenu(){
@@ -30,11 +36,27 @@ public class PopUpMenu : MonoBehaviour
 				isShowing = !isShowing;
 				pause.SetActive (isShowing);
 				Time.timeScale = 0;
-				Debug.Log (Time.timeScale);
+				//Debug.Log (Time.timeScale);
 			}
 			pauseToggle = !pauseToggle;
 		}
 
+	}
+
+	void GameOver(){
+		if (isDead == true) {
+			gameover.SetActive (true);
+			Debug.Log ("died");
+		}
+	}
+
+	void Jump(){
+		if (jumpShowing == true) {
+			jump.SetActive (true);
+		} else {
+			jump.SetActive (false);
+		}
+				
 	}
 		
 }

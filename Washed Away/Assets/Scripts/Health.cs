@@ -12,16 +12,17 @@ public class Health : MonoBehaviour {
 	private PlayerController playerMovement;
 	private GameObject player;
 
-	//private GameObject gameOver;
 	private Animator playerAnim;
+
+	public PopUpMenu gameOver;
 
 
 	void Start()
 	{
 		currentHP = startHP;
 		player = GameObject.FindGameObjectWithTag ("Player"); 
-		playerMovement = player.GetComponent <PlayerController>();	//get the player controller script
-		//gameOver = GameObject.Find ("GameOver");
+		playerMovement = player.GetComponent <PlayerController>();
+		gameOver = player.GetComponent<PopUpMenu>();
 		playerAnim = player.GetComponent<Animator> ();
 	}
 
@@ -63,8 +64,7 @@ public class Health : MonoBehaviour {
 	{
 		playerMovement.movements = false;
 		playerAnim.enabled = false;
-		//playerMovement.enabled = false;
-		//gameOver.gameObject.SetActive (true);
-        //SceneManager.LoadScene("GameOver");
+		gameOver.isDead = true;
+		Debug.Log ("hp death");
 	}
 }
