@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WaterDisable : MonoBehaviour 
 {
-    private bool isJumping = true;
     public BoxCollider2D waterLane;
 
     private void Update()
@@ -15,10 +14,11 @@ public class WaterDisable : MonoBehaviour
         }
     }
 
+    //Disables the water lane after spacebar is pressed, simulating a jump
     IEnumerator Jumping()
     {
         waterLane.enabled = false;
-        yield return new WaitForSecondsRealtime(0.3f);
+        yield return new WaitForSecondsRealtime(.3f);
         waterLane.enabled = true;
     }
     
