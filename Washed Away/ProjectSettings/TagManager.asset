@@ -7,6 +7,8 @@ TagManager:
   - RunningWater
   - GrassDMG
   - Foam
+  - HealthPickUp
+  - Obstacle
   layers:
   - Default
   - TransparentFX

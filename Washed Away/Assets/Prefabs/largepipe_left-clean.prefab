@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114553657775923904}
   m_Layer: 0
   m_Name: largepipe_left-clean
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,8 +75,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6e80a2e914a426fb39d2dcdc1347a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHP: 100
-  currentHP: 0
 --- !u!212 &212983469910236874
 SpriteRenderer:
   m_ObjectHideFlags: 1

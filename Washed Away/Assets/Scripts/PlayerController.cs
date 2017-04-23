@@ -19,8 +19,11 @@ public class PlayerController : MonoBehaviour {
 	public bool movements;
 
 	GameObject player;
+    private GameObject Heart4;
+    private GameObject Heart3;
+    private GameObject Heart2;
 
-	Scene cureentScene;
+    Scene cureentScene;
 	private string sceneName;
 
 	void Start () 
@@ -30,7 +33,11 @@ public class PlayerController : MonoBehaviour {
 		movements = true;
 
 		player = GameObject.FindGameObjectWithTag ("Player");
-		cureentScene = SceneManager.GetActiveScene ();
+        Heart4 = GameObject.Find("Heart4");
+        Heart3 = GameObject.Find("Heart3");
+        Heart2 = GameObject.Find("Heart2");
+
+        cureentScene = SceneManager.GetActiveScene ();
 		sceneName = cureentScene.name;
 	}
 
@@ -80,4 +87,32 @@ public class PlayerController : MonoBehaviour {
 			rigidBody.velocity = new Vector2 (rigidBody.velocity.x, 0f);
 		}
 	}
+    
+    //Picks up health
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("HealthPickUp"))
+        {
+            //Deletes the health pickup on contact
+            other.gameObject.SetActive(false);
+
+            if (Health.currentHP == 100)
+                Health.currentHP += 0;
+            if(Health.currentHP == 75)
+            {
+                Health.currentHP += 25;
+                Heart4.SetActive(true); //Reactivates the heart on the HUD
+            }
+            if (Health.currentHP == 50)
+            {
+                Health.currentHP += 25;
+                Heart3.SetActive(true);
+            }
+            if (Health.currentHP == 25)
+            {
+                Health.currentHP += 25;
+                Heart2.SetActive(true);
+            }
+        }
+    }
 }

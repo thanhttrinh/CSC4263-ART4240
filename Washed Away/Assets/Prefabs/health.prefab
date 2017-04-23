@@ -9,45 +9,65 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1963300339595726}
+  m_RootGameObject: {fileID: 1201279699950880}
   m_IsPrefabParent: 1
---- !u!1 &1963300339595726
+--- !u!1 &1201279699950880
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4434673982634738}
-  - component: {fileID: 212409798837587460}
-  - component: {fileID: 60522384271160134}
-  - component: {fileID: 114162931536006686}
+  - component: {fileID: 4901864511097148}
+  - component: {fileID: 212978529089410694}
+  - component: {fileID: 60831798234925708}
+  - component: {fileID: 50870471556499548}
   m_Layer: 0
-  m_Name: largepipe_right-clean
-  m_TagString: Obstacle
+  m_Name: health
+  m_TagString: HealthPickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4434673982634738
+--- !u!4 &4901864511097148
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1963300339595726}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: 57.528, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_GameObject: {fileID: 1201279699950880}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.404, y: 0.991, z: 0}
+  m_LocalScale: {x: 0.45735613, y: 0.45735613, z: 0.45735613}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60522384271160134
+--- !u!50 &50870471556499548
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1201279699950880}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &60831798234925708
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1963300339595726}
+  m_GameObject: {fileID: 1201279699950880}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -56,31 +76,26 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 0.62, y: 0.44}
-      - {x: 0.62, y: 0.32999998}
-      - {x: -1.05, y: 0.32}
-      - {x: -1.05, y: -0.32}
-      - {x: -0.97999996, y: -0.34}
-      - {x: 0.52, y: -0.44}
-      - {x: 1.05, y: -0.44}
-      - {x: 1.05, y: 0.44}
---- !u!114 &114162931536006686
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1963300339595726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc6e80a2e914a426fb39d2dcdc1347a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!212 &212409798837587460
+    - - {x: 0.265, y: 0.305}
+      - {x: 0.055, y: 0.305}
+      - {x: -0.000098003926, y: 0.24970475}
+      - {x: -0.074999996, y: 0.305}
+      - {x: -0.255, y: 0.305}
+      - {x: -0.375, y: 0.185}
+      - {x: -0.375, y: -0.055}
+      - {x: -0.305, y: -0.114999995}
+      - {x: -0.195, y: -0.24499999}
+      - {x: -0.13499999, y: -0.305}
+      - {x: 0.125, y: -0.305}
+      - {x: 0.375, y: -0.044999998}
+      - {x: 0.375, y: 0.185}
+      - {x: 0.325, y: 0.24499999}
+--- !u!212 &212978529089410694
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1963300339595726}
+  m_GameObject: {fileID: 1201279699950880}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -106,7 +121,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1639857897
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bb71f0b01ce894a8584ca32467a66022, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d64d9c908c8fc4235bafb0f61ff57564, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

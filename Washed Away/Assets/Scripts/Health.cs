@@ -11,8 +11,11 @@ public class Health : MonoBehaviour {
 
 	private PlayerController playerMovement;
 	private GameObject player;
-
-	private Animator playerAnim;
+    private GameObject Heart4;
+    private GameObject Heart3;
+    private GameObject Heart2;
+    private GameObject Heart;
+    private Animator playerAnim;
 
 	PopUpMenu gameOver;
 
@@ -20,8 +23,13 @@ public class Health : MonoBehaviour {
 	void Start()
 	{
 		currentHP = startHP;
-		player = GameObject.FindGameObjectWithTag ("Player"); 
-		playerMovement = player.GetComponent <PlayerController>();
+		player = GameObject.FindGameObjectWithTag ("Player");
+        Heart4 = GameObject.Find("Heart4");
+        Heart3 = GameObject.Find("Heart3");
+        Heart2 = GameObject.Find("Heart2");
+        Heart = GameObject.Find("Heart");
+
+        playerMovement = player.GetComponent <PlayerController>();
 		gameOver = player.GetComponent<PopUpMenu>();
 		playerAnim = player.GetComponent<Animator> ();
 	}
@@ -31,32 +39,34 @@ public class Health : MonoBehaviour {
 
 	}
 
-	//this function detect when the player trigger a damage event
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.gameObject == player) 
-		{
-			currentHP -= 25;
+    //this function detect when the player trigger a damage event 
+    // **(See PlayerController OnTriggerEnter2D for health and heart restore)**
+    void OnTriggerEnter2D(Collider2D other)
+    {
 
-			if (currentHP == 75) 
-			{
-				Destroy (GameObject.Find ("Heart4"));
-			}
-			if (currentHP == 50) 
-			{
-				Destroy (GameObject.Find ("Heart3"));
-			}
-			if (currentHP == 25) 
-			{
-				Destroy (GameObject.Find ("Heart2"));
-			}
-			if (currentHP == 0) 
-			{
-				Destroy (GameObject.Find ("Heart"));
-				Death ();
-			}
-		}
-	}
+        if (other.gameObject == player)
+        {
+            currentHP -= 25;
+            if (currentHP == 75)
+            {
+                Heart4.SetActive(false); //Deactivates the heart on the HUD
+            }
+            if (currentHP == 50)
+            {
+                Heart3.SetActive(false);
+            }
+            if (currentHP == 25)
+            {
+                Heart2.SetActive(false);
+            }
+            if (currentHP == 0)
+            {
+                Heart.SetActive(false);
+                Death();
+            }
+        }
+        
+    }
 
 	//this function disable the player movement script
 	void Death ()
