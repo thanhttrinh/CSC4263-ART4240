@@ -27,6 +27,10 @@ public class SceneTransition : MonoBehaviour {
 
 	void Update()
 	{
+        //Cheat for level skip
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.S))
+            SceneManager.LoadScene("Yard");
+
 		if (enter) 
 		{
 			Scene ("Yard");
