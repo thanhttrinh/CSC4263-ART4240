@@ -10,7 +10,7 @@ public class WaterFallTrigger : MonoBehaviour {
 	public GameObject foam1;
 	public GameObject foam2;
 	public GameObject foam3;
-
+    public AudioClip Sound;
 	private int counter = 0;
 
 	// Use this for initialization
@@ -30,6 +30,7 @@ public class WaterFallTrigger : MonoBehaviour {
 				water1.gameObject.GetComponent<BoxCollider2D> ().enabled = true;
 				water1.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				water1.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
+                AudioSource.PlayClipAtPoint(Sound, transform.position);
 
 				foam1.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				foam1.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
@@ -37,15 +38,17 @@ public class WaterFallTrigger : MonoBehaviour {
 				water2.gameObject.GetComponent<BoxCollider2D> ().enabled = true;
 				water2.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				water2.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
+                AudioSource.PlayClipAtPoint(Sound, transform.position);
 
-				foam2.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
+                foam2.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				foam2.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
 			} else if(counter == 2 && water2 != null && foam3 != null) {
 				water3.gameObject.GetComponent<BoxCollider2D> ().enabled = true;
 				water3.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				water3.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
+                AudioSource.PlayClipAtPoint(Sound, transform.position);
 
-				foam3.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
+                foam3.gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 				foam3.gameObject.GetComponent<Rigidbody2D> ().gravityScale = 0.2f;
 			}
 			counter++;
