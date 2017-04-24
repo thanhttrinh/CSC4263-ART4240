@@ -15,13 +15,7 @@ public class PopUpMenu : MonoBehaviour
 	public bool jumpShowing;
 	public bool dashShowing;
 	public bool isDead;
-	private bool isShowing;
-	private bool pauseToggle;
-
-	void Start () 
-	{
-		pauseToggle = false;
-	}
+	public bool pauseToggle = false;
 	
 	void Update ()
 	{
@@ -30,28 +24,27 @@ public class PopUpMenu : MonoBehaviour
 		GameOver ();
 		Dash ();
 	}
-
+	//Toggles the pause menu using the ESC key
 	void PauseMenu(){
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			if (pauseToggle) {
 				Time.timeScale = 1.0f;
+				pause.SetActive (false);
 			} else {
-				isShowing = !isShowing;
-				pause.SetActive (isShowing);
+				pause.SetActive (true);
 				Time.timeScale = 0;
-				//Debug.Log (Time.timeScale);
 			}
 			pauseToggle = !pauseToggle;
 		}
 
 	}
-
+	//Display the GameOver UI
 	void GameOver(){
 		if (isDead == true) {
 			gameover.SetActive (true);
 		}
 	}
-
+	//Display the JUMP instruction UI
 	void Jump(){
 		if (jumpShowing == true) {
 			jump.SetActive (true);
@@ -60,7 +53,7 @@ public class PopUpMenu : MonoBehaviour
 		}
 				
 	}
-
+	//Display the Dash instruction UI
 	void Dash()
 	{
 		if (dashShowing == true) {

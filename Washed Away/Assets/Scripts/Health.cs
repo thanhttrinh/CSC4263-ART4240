@@ -47,9 +47,10 @@ public class Health : MonoBehaviour {
         if (other.gameObject == player)
         {
             currentHP -= 25;
+			//Deactivates the heart on the HUD
             if (currentHP == 75)
             {
-                Heart4.SetActive(false); //Deactivates the heart on the HUD
+                Heart4.SetActive(false);
             }
             if (currentHP == 50)
             {

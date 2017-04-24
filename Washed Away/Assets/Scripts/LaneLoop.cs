@@ -20,7 +20,7 @@ public class LaneLoop : MonoBehaviour {
 
 	void Update()
 	{
-		//once the player loop 3 times
+		//once the player loop 2 times
 		//the the collider will be disable
 		if (enter) {
 			trigger.enabled = false;
@@ -31,13 +31,9 @@ public class LaneLoop : MonoBehaviour {
 	{
 		counter++;
 
-		if (counter <= 3) 
+		if (counter <= 2) 
 		{
 			other.gameObject.transform.position = new Vector3 (prevPosition.x, prevPosition.y + 3.5f, 0);
-
-			//for testing
-			//other.gameObject.transform.position = new Vector3 (prevPosition.x, 55f, 0);
-
 			enter = false;
 		} 
 		else 

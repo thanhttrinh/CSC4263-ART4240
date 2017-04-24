@@ -8,22 +8,14 @@ public class PlayerController : MonoBehaviour {
 	public float moveSpeed;
 	private Rigidbody2D rigidBody;
 
-	private Vector2 lastMove;
-
-	private CircleCollider2D cirlceCollider;
-	public int DashSupply = 30;
-	private float nextActionTime = 0f;
-	public float period = 3f;
-
 	public bool backKey;
 	public bool movements;
 
-	GameObject player;
     private GameObject Heart4;
     private GameObject Heart3;
     private GameObject Heart2;
 
-    Scene cureentScene;
+    Scene currentScene;
 	private string sceneName;
 
 	void Start () 
@@ -32,13 +24,12 @@ public class PlayerController : MonoBehaviour {
 		backKey = true;
 		movements = true;
 
-		player = GameObject.FindGameObjectWithTag ("Player");
         Heart4 = GameObject.Find("Heart4");
         Heart3 = GameObject.Find("Heart3");
         Heart2 = GameObject.Find("Heart2");
 
-        cureentScene = SceneManager.GetActiveScene ();
-		sceneName = cureentScene.name;
+        currentScene = SceneManager.GetActiveScene ();
+		sceneName = currentScene.name;
 	}
 
 	void Update () 
@@ -50,7 +41,6 @@ public class PlayerController : MonoBehaviour {
 			Input.GetAxisRaw ("Horizontal") < -0.5f) 
 		{
 			rigidBody.velocity = new Vector2 (Input.GetAxisRaw ("Horizontal") * moveSpeed * Time.deltaTime, rigidBody.velocity.y);
-			lastMove = new Vector2 (Input.GetAxisRaw ("Horizontal"), 0f);
 		}
 		// If force is between -0.5 and 0.5 then player will not move
 		if (Input.GetAxisRaw ("Horizontal") < 0.5f && 
