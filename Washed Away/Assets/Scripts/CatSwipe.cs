@@ -5,12 +5,14 @@ using UnityEngine;
 public class CatSwipe : MonoBehaviour {
 	public GameObject paw;
 	public GameObject warning;
-	// Use this for initialization
-	void Start () {
+
+    public AudioClip WarningSound;
+    public AudioClip CatS;
+
+    void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
@@ -19,7 +21,9 @@ public class CatSwipe : MonoBehaviour {
 		if (other.gameObject.tag == "Player") {
 			warning.gameObject.GetComponent<SpriteRenderer>().enabled = true;
 			paw.gameObject.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Dynamic;
-		}
+            AudioSource.PlayClipAtPoint(WarningSound, transform.position);
+            AudioSource.PlayClipAtPoint(CatS, transform.position);
+        }
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
