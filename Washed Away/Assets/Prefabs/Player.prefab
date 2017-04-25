@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212156618235310426}
   - component: {fileID: 95837691115064618}
   - component: {fileID: 50722542907383576}
-  - component: {fileID: 114032344960588082}
   - component: {fileID: 114793839162807486}
   - component: {fileID: 114612292076450670}
   - component: {fileID: 114274640843377460}
@@ -79,17 +78,7 @@ PolygonCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.02, y: 1.15}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   m_Points:
     m_Paths:
     - - {x: 0.2547264, y: -0.29542542}
@@ -153,17 +142,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114032344960588082
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1554352045680444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114274640843377460
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,8 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 70
-  DashSupply: 30
-  period: 3
   backKey: 0
   movements: 0
 --- !u!114 &114736738844510954
@@ -213,6 +189,7 @@ MonoBehaviour:
   jumpShowing: 0
   dashShowing: 0
   isDead: 0
+  pauseToggle: 0
 --- !u!114 &114793839162807486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,13 +232,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -769944465
-  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1244f77b1350642f2a621fe9dd3bf457, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0

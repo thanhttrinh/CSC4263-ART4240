@@ -4520,7 +4520,8 @@ Prefab:
       propertyPath: waterLane
       value: 
       objectReference: {fileID: 636676875}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114032344960588082, guid: b9ae39bb028f70e4cb510a5adfafbd0f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b9ae39bb028f70e4cb510a5adfafbd0f, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &195887290
@@ -18673,6 +18674,11 @@ Prefab:
       propertyPath: WaterS3
       value: 
       objectReference: {fileID: 8300000, guid: c4343382a0cde8048b3178ae6d39e432, type: 3}
+    - target: {fileID: 114930230813394284, guid: f13bce516bae740ecbeb1601505a9652,
+        type: 2}
+      propertyPath: WaterS
+      value: 
+      objectReference: {fileID: 8300000, guid: 19b25c471eabaac4082eb56f44d961fa, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f13bce516bae740ecbeb1601505a9652, type: 2}
   m_IsPrefabParent: 0
@@ -20568,6 +20574,11 @@ Prefab:
       propertyPath: WaterS3
       value: 
       objectReference: {fileID: 8300000, guid: c4343382a0cde8048b3178ae6d39e432, type: 3}
+    - target: {fileID: 114930230813394284, guid: f13bce516bae740ecbeb1601505a9652,
+        type: 2}
+      propertyPath: WaterS
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f3bf1b19ed893b4c9b5e3e7fc235c85, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f13bce516bae740ecbeb1601505a9652, type: 2}
   m_IsPrefabParent: 0
