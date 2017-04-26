@@ -34,6 +34,7 @@ public class LaneLoop : MonoBehaviour {
 		if (counter <= 2) 
 		{
 			other.gameObject.transform.position = new Vector3 (prevPosition.x, prevPosition.y + 3.5f, 0);
+            Health.pickup.SetActive(true);
 			enter = false;
 		} 
 		else 

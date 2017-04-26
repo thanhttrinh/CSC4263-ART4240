@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,7 +15,7 @@ public class PlayerController : MonoBehaviour {
     private GameObject Heart4;
     private GameObject Heart3;
     private GameObject Heart2;
-
+    
     Scene currentScene;
 	private string sceneName;
 
@@ -30,11 +31,13 @@ public class PlayerController : MonoBehaviour {
 
         currentScene = SceneManager.GetActiveScene ();
 		sceneName = currentScene.name;
-	}
 
-	void Update () 
+        
+    }
+    void Update () 
 	{
-		rigidBody.velocity = new Vector2 (rigidBody.velocity.x, moveSpeed * Time.deltaTime);
+
+        rigidBody.velocity = new Vector2 (rigidBody.velocity.x, moveSpeed * Time.deltaTime);
 		moveSpeed += 0.01f;
 			//if A or D is pressed, a force will be applied in the Horizontal direction
 		if (Input.GetAxisRaw ("Horizontal") > 0.5f || 

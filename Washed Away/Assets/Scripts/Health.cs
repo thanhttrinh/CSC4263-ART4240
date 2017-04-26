@@ -16,7 +16,7 @@ public class Health : MonoBehaviour {
     private GameObject Heart2;
     private GameObject Heart;
     private Animator playerAnim;
-
+    public static GameObject pickup;
 	PopUpMenu gameOver;
 
 
@@ -28,7 +28,7 @@ public class Health : MonoBehaviour {
         Heart3 = GameObject.Find("Heart3");
         Heart2 = GameObject.Find("Heart2");
         Heart = GameObject.Find("Heart");
-
+        pickup = GameObject.FindGameObjectWithTag("HealthPickUp");
         playerMovement = player.GetComponent <PlayerController>();
 		gameOver = player.GetComponent<PopUpMenu>();
 		playerAnim = player.GetComponent<Animator> ();
