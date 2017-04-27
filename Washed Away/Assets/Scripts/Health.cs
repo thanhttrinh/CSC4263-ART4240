@@ -7,7 +7,10 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour {
 
 	public static int startHP = 100;	//player's starting hp
-	public static int currentHP;		//player's hp after being damaged
+	public static int currentHP;        //player's hp after being damaged
+
+    private GameObject healthtick;  //where the health loss sound comes from
+    private AudioSource thud;
 
 	private PlayerController playerMovement;
 	private GameObject player;
@@ -32,6 +35,10 @@ public class Health : MonoBehaviour {
         playerMovement = player.GetComponent <PlayerController>();
 		gameOver = player.GetComponent<PopUpMenu>();
 		playerAnim = player.GetComponent<Animator> ();
+
+        //instanstiate healthtick audio
+        healthtick = GameObject.Find("HealthTick");
+        thud = healthtick.GetComponent<AudioSource>();
 	}
 
 	void Update()
@@ -47,6 +54,10 @@ public class Health : MonoBehaviour {
         if (other.gameObject == player)
         {
             currentHP -= 25;
+
+            //play health loss sound "healthtick"
+            thud.Play();
+
 			//Deactivates the heart on the HUD
             if (currentHP == 75)
             {
